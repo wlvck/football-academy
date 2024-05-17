@@ -2,6 +2,7 @@
   <div>
     <!-- <navigation-bar /> -->
     <slot></slot>
+    <CustomFooter/>
   </div>
 </template>
 
