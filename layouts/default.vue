@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen">
     <!-- <navigation-bar /> -->
-    <slot></slot>
+    <div class="flex-[1_1_auto]">
+      <slot></slot>
+    </div>
     <CustomFooter/>
   </div>
 </template>
