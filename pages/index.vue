@@ -18,7 +18,9 @@
               >Academy</nuxt-link
             >
             <a href="#products" class="inline-block px-3">Products</a>
-            <a href="#community" class="inline-block px-3">Community</a>
+            <nuxt-link to="/community" class="inline-block px-3"
+              >Community</nuxt-link
+            >
             <a href="#company" class="inline-block px-3">Company</a>
           </div>
           <div class="hidden md:flex items-center">
