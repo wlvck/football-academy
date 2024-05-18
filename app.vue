@@ -4,11 +4,24 @@
   </NuxtLayout>
 </template>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Font1', sans-serif;
 }
 body {
-  background: #171717;
+  background: #131313;
+}
+@font-face {
+  font-family: 'Font1';
+  src: url('./assets/fonts/Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Font2';
+  src: url('./assets/fonts/Zeppelin.otf') format('opentype');
+}
+.zeppelin-font {
+  font-family: 'Font2' !important;
 }
 </style>

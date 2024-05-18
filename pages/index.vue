@@ -5,11 +5,18 @@
     >
       <div class="max-w-[1300px] w-full mx-auto px-4">
         <div class="flex items-center justify-between">
-          <nuxt-icon name="01" filled class="text-[90px]" />
+          <nuxt-icon
+            name="01"
+            filled
+            class="text-[90px] cursor-pointer"
+            @click.prevent="$router.push('/')"
+          />
           <div
             class="text-[17px] text-[white] font-medium hidden md:flex items-center"
           >
-            <a href="#academy" class="inline-block px-3">Academy</a>
+            <nuxt-link to="/academy" class="inline-block px-3"
+              >Academy</nuxt-link
+            >
             <a href="#products" class="inline-block px-3">Products</a>
             <a href="#community" class="inline-block px-3">Community</a>
             <a href="#company" class="inline-block px-3">Company</a>
@@ -29,7 +36,7 @@
           <nuxt-icon name="02" filled class="block md:hidden" />
         </div>
         <div class="pt-[120px]">
-          <h1 class="text-[40px] text-[#E9E9E9] mb-5">
+          <h1 class="text-[40px] text-[#E9E9E9] mb-5 zeppelin-font font-bold">
             JOIN THE <br />
             ACADEMY LA UNITED!
           </h1>
@@ -57,7 +64,9 @@
       <div class="flex items-center justify-between">
         <img src="~/assets/images/frame-1.png" alt="" />
         <div>
-          <h1 class="text-[36px] font-semibold text-[#FFFFFF] mb-2">
+          <h1
+            class="text-[36px] font-semibold text-[#FFFFFF] zeppelin-font mb-2"
+          >
             DOWNLOAD APP!
           </h1>
           <p class="text-[20px] font-medium text-[#FFFFFF]">
@@ -72,7 +81,9 @@
     <div class="max-w-[1300px] py-[40px] w-full mx-auto px-4">
       <div class="flex items-center justify-between">
         <div>
-          <h1 class="text-[36px] font-semibold text-[#FFFFFF] mb-2">
+          <h1
+            class="text-[36px] font-semibold zeppelin-font text-[#FFFFFF] mb-2"
+          >
             CHECK OUT THE NEWS!
           </h1>
           <p class="text-[20px] font-medium text-[#FFFFFF]">
@@ -86,7 +97,9 @@
       <div class="flex items-center justify-between">
         <img src="~/assets/images/frame-3.png" alt="" />
         <div>
-          <h1 class="text-[36px] font-semibold text-[#FFFFFF] mb-2">
+          <h1
+            class="text-[36px] font-semibold text-[#FFFFFF] zeppelin-font mb-2"
+          >
             READ GAME!
           </h1>
           <p class="text-[20px] font-medium text-[#FFFFFF]">
@@ -98,7 +111,9 @@
     <div class="max-w-[1300px] py-[40px] w-full mx-auto px-4">
       <div class="flex items-center justify-between">
         <div>
-          <h1 class="text-[36px] font-semibold text-[#FFFFFF] mb-2">
+          <h1
+            class="text-[36px] font-semibold text-[#FFFFFF] zeppelin-font mb-2"
+          >
             BE A CHAMPION <br />
             WITH LAUN!
           </h1>
