@@ -37,7 +37,7 @@
       ALL <br />
       COMMUNITY
     </h1>
-    <div class="flex flex-row gap-8] mb-[100px]">
+    <div class="flex flex-row gap-8 mb-[100px]">
       <div class="grow shrink basis-auto text-[white]">
         <div
           class="border-solid border-[1px] border-[#5F5F5F] rounded-[25px] p-5 mb-[40px]"
@@ -229,9 +229,13 @@
       </div>
       <div class="max-w-[320px] w-full">
         <div
-          class="border-solid border-[1px] border-[#5F5F5F] rounded-[25px] p-4"
+          class="border-solid border-[1px] flex justify-between border-[#5F5F5F] rounded-[25px] p-4"
         >
-          <p class="text-[20px] font-medium">Create community</p>
+          <p class="text-[20px] font-medium text-[white]">
+            Create <br />
+            community
+          </p>
+          <nuxt-icon name="14" filled class="text-[80px]"/>
         </div>
       </div>
     </div>
