@@ -17,11 +17,15 @@
             <nuxt-link to="/academy" class="inline-block px-3"
               >Academy</nuxt-link
             >
-            <a href="#products" class="inline-block px-3">Products</a>
+            <nuxt-link to="/products" class="inline-block px-3"
+              >Products</nuxt-link
+            >
             <nuxt-link to="/community" class="inline-block px-3"
               >Community</nuxt-link
             >
-            <a href="#company" class="inline-block px-3">Company</a>
+            <nuxt-link to="/company" class="inline-block px-3"
+              >Company</nuxt-link
+            >
           </div>
           <div class="hidden md:flex items-center">
             <button

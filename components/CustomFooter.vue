@@ -4,10 +4,10 @@
       <nuxt-icon name="03" filled class="text-[92px]" />
       <div class="grid grid-cols-3 text-[white]">
         <div>
-          <p class="mb-4">About</p>
-          <p class="mb-4">Our story</p>
-          <p class="mb-4">Shop</p>
-          <p>Academy</p>
+          <nuxt-link to="/about" class="mb-4 block">About</nuxt-link>
+          <nuxt-link to="/about" class="mb-4 block">Our story</nuxt-link>
+          <nuxt-link to="/products" class="mb-4 block">Shop</nuxt-link>
+          <nuxt-link to="/academy" class="block">Academy</nuxt-link>
         </div>
         <div>
           <div>

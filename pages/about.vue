@@ -12,11 +12,13 @@
           class="text-[17px] text-[white] font-medium hidden md:flex items-center"
         >
           <nuxt-link to="/academy" class="inline-block px-3">Academy</nuxt-link>
-          <a href="#products" class="inline-block px-3">Products</a>
+          <nuxt-link to="/products" class="inline-block px-3"
+            >Products</nuxt-link
+          >
           <nuxt-link to="/community" class="inline-block px-3"
             >Community</nuxt-link
           >
-          <a href="#company" class="inline-block px-3">Company</a>
+          <nuxt-link to="/company" class="inline-block px-3">Company</nuxt-link>
         </div>
         <div class="hidden md:flex items-center">
           <button
@@ -54,7 +56,9 @@
         >
           TROPHIE HALL
         </h1>
-        <div class="grid grid-cols-3 gap-4 max-w-[1000px] mx-auto text-[23px] font-medium text-center">
+        <div
+          class="grid grid-cols-3 gap-4 max-w-[1000px] mx-auto text-[23px] font-medium text-center"
+        >
           <div class="flex items-center flex-col justify-end">
             <img src="@/assets/images/kubok-2.png" alt="" class="mb-4" />
             <p>
