@@ -26,11 +26,13 @@
           <div class="hidden md:flex items-center">
             <button
               class="border-[1px] border-solid text-[17px] border-[#606060] text-[white] rounded-[8px] px-3 py-2"
+              @click.prevent="$router.push({ name: 'auth-login' })"
             >
               Log In
             </button>
             <button
               class="text-[black] text-[17px] bg-[#D9D9D9] px-3 py-2 ml-3 rounded-[8px]"
+              @click.prevent="$router.push({ name: 'auth-register' })"
             >
               Sign Up
             </button>

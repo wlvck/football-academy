@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-[1300px] w-full mx-auto px-4">
+  <div class="max-w-[1300px] w-full mx-auto px-4 pb-[100px]">
     <div>
       <div class="flex items-center justify-between">
         <nuxt-icon
@@ -21,11 +21,13 @@
         <div class="hidden md:flex items-center">
           <button
             class="border-[1px] border-solid text-[17px] border-[#606060] text-[white] rounded-[8px] px-3 py-2"
+            @click.prevent="$router.push({ name: 'auth-login' })"
           >
             Log In
           </button>
           <button
             class="text-[black] text-[17px] bg-[#D9D9D9] px-3 py-2 ml-3 rounded-[8px]"
+            @click.prevent="$router.push({ name: 'auth-register' })"
           >
             Sign Up
           </button>
@@ -227,16 +229,22 @@
           </v-tabs-window-item>
         </v-tabs-window>
       </div>
-      <div class="max-w-[320px] w-full">
-        <div
-          class="border-solid border-[1px] flex justify-between border-[#5F5F5F] rounded-[25px] p-4"
+    </div>
+    <div class="max-w-[600px] mx-auto">
+      <h1
+        class="text-[20px] font-bold zeppelin-font mb-5 text-[white] mt-[50px]"
+      >
+        Create community
+      </h1>
+      <div class="w-full bg-white p-5 rounded-[25px]">
+        <v-text-field
+          label="Name"
+          variant="outlined"
+          color="#ff6600"
+        ></v-text-field>
+        <v-btn class="w-full !bg-[#ff6600] text-white py-4" height="auto"
+          >Submit</v-btn
         >
-          <p class="text-[20px] font-medium text-[white]">
-            Create <br />
-            community
-          </p>
-          <nuxt-icon name="14" filled class="text-[80px]"/>
-        </div>
       </div>
     </div>
   </div>
