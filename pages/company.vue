@@ -1,11 +1,11 @@
 <template>
   <NavigationBar />
   <div class="max-w-[1300px] w-full mx-auto px-4">
-    <div class="text-[32px] font-bold text-center pt-[80px]">
+    <div class="text-[32px] font-bold text-center md:pt-[80px] pt-[40px]">
       <h1 class="text-[#FF5C00]">GAME BETTER.</h1>
       <h1 class="text-white">START LIVING BEAUTIFULLY WITH OUR TEAM</h1>
     </div>
-    <div class="my-[100px] rounded-[20px] overflow-hidden">
+    <div class="md:my-[100px] my-[40px] rounded-[20px] overflow-hidden">
       <iframe
         width="100%"
         height="500"

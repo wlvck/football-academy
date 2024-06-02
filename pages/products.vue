@@ -7,6 +7,7 @@
           v-model="tab"
           bg-color="transparent"
           color="#FF5C00"
+          show-arrows
           slider-color="#FF5C00"
         >
           <v-tab value="all" elevation="0" :ripple="false">All products</v-tab>
@@ -19,7 +20,7 @@
 
       <v-tabs-window v-model="tab">
         <v-tabs-window-item value="all">
-          <div class="grid grid-cols-3 gap-5 p-5">
+          <div class="grid md:grid-cols-3 gap-5 p-5">
             <div
               v-for="(item, index) in items"
               :key="index"
@@ -36,7 +37,7 @@
           </div>
         </v-tabs-window-item>
         <v-tabs-window-item value="t-short">
-          <div class="grid grid-cols-3 gap-5 p-5">
+          <div class="grid md:grid-cols-3 gap-5 p-5">
             <div
               class="flex flex-col items-center border-[1px] border-solid border-[#606060] rounded-[12px] cursor-pointer duration-300 hover:scale-[1.06]"
             >
@@ -47,7 +48,7 @@
           </div>
         </v-tabs-window-item>
         <v-tabs-window-item value="bottle">
-          <div class="grid grid-cols-3 gap-5 p-5">
+          <div class="grid md:grid-cols-3 gap-5 p-5">
             <div
               class="flex flex-col items-center border-[1px] border-solid border-[#606060] rounded-[12px] cursor-pointer duration-300 hover:scale-[1.06]"
             >
@@ -58,7 +59,7 @@
           </div>
         </v-tabs-window-item>
         <v-tabs-window-item value="ball">
-          <div class="grid grid-cols-3 gap-5 p-5">
+          <div class="grid md:grid-cols-3 gap-5 p-5">
             <div
               class="flex flex-col items-center border-[1px] border-solid border-[#606060] rounded-[12px] cursor-pointer duration-300 hover:scale-[1.06]"
             >
@@ -69,7 +70,7 @@
           </div>
         </v-tabs-window-item>
         <v-tabs-window-item value="cap">
-          <div class="grid grid-cols-3 gap-5 p-5">
+          <div class="grid md:grid-cols-3 gap-5 p-5">
             <div
               class="flex flex-col items-center border-[1px] border-solid border-[#606060] rounded-[12px] cursor-pointer duration-300 hover:scale-[1.06]"
             >
