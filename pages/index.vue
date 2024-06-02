@@ -5,12 +5,12 @@
     >
       <NavigationBar />
       <div class="max-w-[1300px] w-full mx-auto px-4">
-        <div class="pt-[120px]">
+        <div class="pt-[120px] relative z-[4]">
           <h1 class="text-[40px] text-[#E9E9E9] mb-5 zeppelin-font font-bold">
             JOIN THE <br />
             ACADEMY LA UNITED!
           </h1>
-          <div class="grid w-[480px] h-[66px] grid-cols-2 gap-5">
+          <div class="grid max-w-[480px] w-full h-[66px] grid-cols-2 gap-5">
             <button
               @click.prevent="$router.push('/academy')"
               class="bg-[#D9D9D9] rounded-[16px] text-[24px] font-semibold text-[#040404] px-4 py-3 mr-4"
@@ -30,19 +30,25 @@
       <img
         src="~/assets/images/flag.png"
         alt=""
-        class="absolute right-0 bottom-0 max-h-[600px]"
+        class="absolute right-0 bottom-0 max-h-[600px] z-[1]"
       />
     </div>
-    <div class="max-w-[1300px] py-[40px] mt-[150px] w-full mx-auto px-4">
-      <div class="flex items-center justify-between">
-        <img src="~/assets/images/frame-1.png" alt="" />
+    <div
+      class="max-w-[1300px] py-[40px] mt-4 md:mt-[150px] w-full mx-auto px-4"
+    >
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <img
+          src="~/assets/images/frame-1.png"
+          alt=""
+          class="max-h-[250px] lg:max-h-max mb-4"
+        />
         <div>
           <h1
             class="text-[36px] font-semibold text-[#FFFFFF] zeppelin-font mb-2"
           >
             DOWNLOAD APP!
           </h1>
-          <p class="text-[20px] font-medium text-[#FFFFFF]">
+          <p class="text-[20px] font-medium text-[#FFFFFF] text-justify">
             On the App you can see more information, more details and news!
           </p>
           <p class="text-[20px] font-medium text-[#FFFFFF]">
@@ -51,8 +57,10 @@
         </div>
       </div>
     </div>
-    <div class="max-w-[1300px] py-[40px] w-full mx-auto px-4">
-      <div class="flex items-center justify-between">
+    <div class="max-w-[1300px] lg:py-[40px] w-full mx-auto px-4">
+      <div
+        class="flex flex-col-reverse md:flex-row items-center justify-between"
+      >
         <div>
           <h1
             class="text-[36px] font-semibold zeppelin-font text-[#FFFFFF] mb-2"
@@ -63,12 +71,20 @@
             Check out the last news, stats our academy!
           </p>
         </div>
-        <img src="~/assets/images/frame-2.png" alt="" />
+        <img
+          src="~/assets/images/frame-2.png"
+          alt=""
+          class="max-h-[250px] lg:max-h-max mb-5"
+        />
       </div>
     </div>
     <div class="max-w-[1300px] py-[40px] w-full mx-auto px-4">
-      <div class="flex items-center justify-between">
-        <img src="~/assets/images/frame-3.png" alt="" />
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <img
+          src="~/assets/images/frame-3.png"
+          alt=""
+          class="max-h-[250px] lg:max-h-max"
+        />
         <div>
           <h1
             class="text-[36px] font-semibold text-[#FFFFFF] zeppelin-font mb-2"
@@ -82,7 +98,9 @@
       </div>
     </div>
     <div class="max-w-[1300px] py-[40px] w-full mx-auto px-4">
-      <div class="flex items-center justify-between">
+      <div
+        class="flex flex-col-reverse md:flex-row items-center justify-between"
+      >
         <div>
           <h1
             class="text-[36px] font-semibold text-[#FFFFFF] zeppelin-font mb-2"
@@ -94,7 +112,11 @@
             You will be a champion with LA UNITED!
           </p>
         </div>
-        <img src="~/assets/images/frame-4.png" alt="" />
+        <img
+          src="~/assets/images/frame-4.png"
+          alt=""
+          class="max-h-[250px] lg:max-h-max mb-10"
+        />
       </div>
     </div>
   </div>

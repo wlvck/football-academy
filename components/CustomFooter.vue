@@ -2,7 +2,7 @@
   <div class="bg-[black] py-[120px]">
     <div class="max-w-[1300px] w-full mx-auto px-4">
       <nuxt-icon name="03" filled class="text-[92px]" />
-      <div class="grid grid-cols-3 text-[white]">
+      <div class="grid md:grid-cols-3 grid-cols-2 text-[white]">
         <div>
           <nuxt-link to="/about" class="mb-4 block">About</nuxt-link>
           <nuxt-link to="/about" class="mb-4 block">Our story</nuxt-link>
@@ -15,7 +15,7 @@
             <p>All Terms and Policies</p>
           </div>
         </div>
-        <div>
+        <div class="mt-[40px] md:mt-[0]">
           <div class="flex items-center gap-3">
             <nuxt-icon name="04" filled class="text-[45px]" />
             <nuxt-icon name="05" filled class="text-[45px]" />
