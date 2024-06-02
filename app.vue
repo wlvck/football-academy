@@ -8,7 +8,7 @@
   font-family: 'Font1', sans-serif;
 }
 body {
-  background: #131313;
+  background: #040203;
 }
 @font-face {
   font-family: 'Font1';

@@ -1,9 +1,9 @@
 <template>
   <div
-    class="min-h-screen relative overflow-hidden bg-[url('~/assets/images/auth-bg.png')] grid grid-cols-2"
+    class="min-h-screen relative overflow-hidden md:bg-[url('~/assets/images/auth-bg.png')] grid md:grid-cols-2 px-4"
   >
-    <div></div>
-    <div class="flex items-center">
+    <div class="hidden md:block"></div>
+    <div class="flex items-center justify-center">
       <div
         class="bg-[white] rounded-[20px] p-[30px] z-[2] relative max-w-[566px] w-full"
       >
