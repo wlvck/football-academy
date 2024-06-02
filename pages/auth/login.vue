@@ -28,6 +28,10 @@
           @click.prevent="submit"
           >Countine</v-btn
         >
+        <div class="text-center text-[15px] font-medium mt-4">
+          <span>Don't have an account? </span>
+          <nuxt-link class="text-[blue]" to="/auth/register">Sign up</nuxt-link>
+        </div>
       </div>
     </div>
   </div>
@@ -39,6 +43,9 @@ import { useToast } from 'vue-toastification';
 import axios from 'axios';
 export default defineComponent({
   setup() {
+    definePageMeta({
+      layout: 'auth',
+    });
     const loading = ref(false);
     const toast = useToast();
     const formData = ref({
