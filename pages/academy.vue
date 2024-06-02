@@ -2,7 +2,7 @@
   <div>
     <NavigationBar />
     <div class="max-w-[1300px] w-full mx-auto px-4">
-      <div class="grid grid-cols-2 gap-[50px] py-[80px]">
+      <div class="grid md:grid-cols-2 gap-[50px] py-[80px]">
         <div>
           <div class="bg-[#0D0D0D] rounded-[20px] p-[40px] text-[white]">
             <h1 class="text-[24px] font-semibold zeppelin-font">
@@ -52,8 +52,9 @@
         </p>
         <Carousel
           class="carousel"
+          ref="myCarousel"
           :transition="800"
-          :items-to-show="4"
+          :items-to-show="itemsToShow"
           :items-to-scroll="1"
           :autoplay="5000"
           :wrap-around="false"
@@ -61,8 +62,8 @@
           :snapAlign="'start'"
         >
           <slide v-for="(item, index) in items" :key="index">
-            <div class="max-w-max">
-              <img :src="item.imgSrc" alt="" />
+            <div class="md:max-w-max max-w-[300px] w-full">
+              <img :src="item.imgSrc" alt="" class="mx-auto"/>
               <p class="text-[#FFFFFF] text-[16px] font-medium">
                 {{ item.name }}
               </p>
@@ -107,6 +108,7 @@ import { defineComponent, ref } from 'vue';
 export default defineComponent({
   components: { Carousel, Slide, Pagination, Navigation },
   setup() {
+    const windowWidth = ref(0);
     const items = ref([
       {
         imgSrc: '_nuxt/assets/images/frame-6.png',
@@ -158,7 +160,27 @@ export default defineComponent({
       },
     ]);
 
-    return { items };
+    onMounted(() => {
+      getWindowWidth();
+      window.addEventListener('resize', getWindowWidth);
+    });
+
+    onBeforeUnmount(() => {
+      window.removeEventListener('resize', getWindowWidth);
+    });
+
+    const getWindowWidth = () => {
+      windowWidth.value = window.innerWidth;
+    };
+
+    const itemsToShow = computed(() =>
+      windowWidth.value < 980 && windowWidth.value > 650
+        ? 3
+        : windowWidth.value < 650
+        ? 1
+        : 4
+    );
+    return { items, itemsToShow };
   },
 });
 </script>
