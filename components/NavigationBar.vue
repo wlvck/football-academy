@@ -17,20 +17,23 @@
           >Community</nuxt-link
         >
         <nuxt-link to="/company" class="inline-block px-3">Company</nuxt-link>
+        <nuxt-link to="/account" class="inline-block px-3">Account</nuxt-link>
       </div>
-      <div class="hidden md:flex items-center">
-        <button
-          class="border-[1px] border-solid text-[17px] border-[#606060] text-[white] rounded-[8px] px-3 py-2"
-          @click.prevent="$router.push({ name: 'auth-login' })"
-        >
-          Log In
-        </button>
-        <button
-          class="text-[black] text-[17px] bg-[#D9D9D9] px-3 py-2 ml-3 rounded-[8px]"
-          @click.prevent="$router.push({ name: 'auth-register' })"
-        >
-          Sign Up
-        </button>
+      <div>
+        <div v-if="!loggedIn" class="hidden md:flex items-center">
+          <button
+            class="border-[1px] border-solid text-[17px] border-[#606060] text-[white] rounded-[8px] px-3 py-2"
+            @click.prevent="$router.push({ name: 'auth-login' })"
+          >
+            Log In
+          </button>
+          <button
+            class="text-[black] text-[17px] bg-[#D9D9D9] px-3 py-2 ml-3 rounded-[8px]"
+            @click.prevent="$router.push({ name: 'auth-register' })"
+          >
+            Sign Up
+          </button>
+        </div>
       </div>
       <nuxt-icon
         name="02"
@@ -63,8 +66,8 @@
           >Academy</span
         >
         <span class="inline-block px-3" @click.prevent="onClick('about')"
-          >About</span
-        >
+          >About
+        </span>
         <span class="inline-block px-3" @click.prevent="onClick('products')"
           >Products</span
         >
@@ -74,8 +77,14 @@
         <span class="inline-block px-3" @click.prevent="onClick('company')"
           >Company</span
         >
+        <span
+          v-if="loggedIn"
+          class="inline-block px-3"
+          @click.prevent="onClick('account')"
+          >Account</span
+        >
       </div>
-      <div class="grid grid-cols-2 gap-5">
+      <div v-if="!loggedIn" class="grid grid-cols-2 gap-5">
         <button
           class="border-[1px] border-solid text-[17px] border-[#606060] text-[white] rounded-[8px] px-3 py-2"
           @click.prevent="onClick('auth-login')"
@@ -103,7 +112,10 @@ export default defineComponent({
       showMenu.value = false;
       await navigateTo({ name });
     };
-    return { showMenu, onClick };
+    const loggedIn = computed(() =>
+      localStorage['accessToken'] ? true : false
+    );
+    return { showMenu, loggedIn, onClick };
   },
 });
 </script>

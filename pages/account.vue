@@ -9,7 +9,7 @@
           <img src="@/assets/images/account-image.png" alt="" />
         </div>
         <div class="flex-[1_1_auto] text-[white]">
-          <h1 class="text-[36px] font-bold">NAME #17</h1>
+          <h1 class="text-[36px] font-bold">{{ userName }} #17</h1>
           <h2 class="text-[#FF6B00]">winger</h2>
           <h3>08.05.2009</h3>
         </div>
@@ -143,11 +143,21 @@ export default defineComponent({
       },
     }));
 
+    onMounted(async () => {
+      if (!localStorage['accessToken']) {
+        await navigateTo({ name: 'auth-login' });
+      }
+    });
+
     const { barChartProps, barChartRef } = useBarChart({
       chartData,
     });
 
-    return { barChartProps };
+    const userName = computed(() => {
+      return `${localStorage['firstName']} ${localStorage['lastName']}`;
+    });
+
+    return { barChartProps, userName };
   },
 });
 </script>

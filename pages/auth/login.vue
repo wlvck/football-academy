@@ -55,11 +55,11 @@ export default defineComponent({
     const submit = async () => {
       try {
         loading.value = true;
-        const response: { accessToken: string } = await axios.post(
+        const response = await axios.post(
           'http://localhost:2003/auth/login',
           formData.value
         );
-        localStorage.setItem('accessToken', response.accessToken);
+        localStorage.setItem('accessToken', response.data.accessToken);
         toast.success('Sucessfully logged in');
         await navigateTo('/');
       } catch (error: any) {

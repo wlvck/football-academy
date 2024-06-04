@@ -81,8 +81,11 @@ export default defineComponent({
           'http://localhost:2003/auth',
           formData.value
         );
+        localStorage.setItem('accessToken', response.data.accessToken);
+        localStorage.setItem('firstName', formData.value.firstName);
+        localStorage.setItem('lastName', formData.value.lastName);
         toast.success('Sucessfully registered');
-        await navigateTo({ name: 'auth-login' });
+        await navigateTo({ name: 'account' });
       } catch (error: any) {
         console.log(error);
         toast.error(error.response.data.message);
