@@ -100,16 +100,54 @@
           <span>Foles </span> <span>7</span>
         </div>
       </div>
+      <div class="mt-[100px]">
+        <BarChart v-bind="barChartProps" />
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-
+import { BarChart, useBarChart } from 'vue-chart-3';
+import { Chart, registerables } from 'chart.js';
+Chart.register(...registerables);
 export default defineComponent({
+  components: { BarChart },
   setup() {
-    return {};
+    const data = ref([30, 40, 60, 70, 5]);
+
+    const chartData = computed(() => ({
+      labels: ['Real Madrid', 'Arsenal', 'M.United', 'M.City', 'Bercelona'],
+      datasets: [
+        {
+          data: data.value,
+          borderColor: '#CBAA00',
+          tension: 0,
+          backgroundColor: [
+            '#77CEFF',
+            '#0079AF',
+            '#123E6B',
+            '#97B0C4',
+            '#A5C8ED',
+          ],
+        },
+      ],
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: false,
+        },
+      },
+    }));
+
+    const { barChartProps, barChartRef } = useBarChart({
+      chartData,
+    });
+
+    return { barChartProps };
   },
 });
 </script>
