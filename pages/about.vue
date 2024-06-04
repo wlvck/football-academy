@@ -2,7 +2,9 @@
   <div class="max-w-[1300px] w-full mx-auto px-4">
     <NavigationBar />
     <div class="text-white md:pt-[80px] pt-[40px]">
-      <h1 class="text-center md:text-[48px] text-[36px] font-semibold mb-6">ABOUT US</h1>
+      <h1 class="text-center md:text-[48px] text-[36px] font-semibold mb-6">
+        ABOUT US
+      </h1>
       <p class="text-center md:text-[24px] text-[18px] font-medium">
         Welcome to the LA United Football Academy — your first step towards big
         football! We are the leading academy in the region, providing
@@ -73,6 +75,7 @@
         />
       </div>
     </div>
+    <contact-us />
   </div>
 </template>
 

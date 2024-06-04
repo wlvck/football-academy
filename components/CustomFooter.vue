@@ -17,12 +17,26 @@
         </div>
         <div class="mt-[40px] md:mt-[0]">
           <div class="flex items-center gap-3">
-            <nuxt-icon name="04" filled class="text-[45px]" />
-            <nuxt-icon name="05" filled class="text-[45px]" />
-            <nuxt-icon name="06" filled class="text-[45px]" />
-            <nuxt-icon name="07" filled class="text-[45px]" />
-            <nuxt-icon name="08" filled class="text-[45px]" />
-            <nuxt-icon name="09" filled class="text-[45px]" />
+            <nuxt-icon
+              name="04"
+              filled
+              class="text-[45px] cursor-pointer"
+              @click.prevent="
+                openUrl(
+                  'https://www.youtube.com/channel/UCSNFxxwpBU2U9jDV2DKmZ3Q'
+                )
+              "
+            />
+            <nuxt-icon name="05" filled class="text-[45px] cursor-pointer]" />
+            <nuxt-icon name="06" filled class="text-[45px] cursor-pointer" />
+            <nuxt-icon name="07" filled class="text-[45px] cursor-pointer" />
+            <nuxt-icon
+              name="08"
+              filled
+              class="text-[45px] cursor-pointer"
+              @click.prevent="openUrl('https://www.instagram.com/la.unitedkz/')"
+            />
+            <nuxt-icon name="09" filled class="text-[45px] cursor-pointer" />
           </div>
         </div>
       </div>
@@ -35,7 +49,10 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
-    return {};
+    const openUrl = (url: string) => {
+      window.open(url, '_blank');
+    };
+    return { openUrl };
   },
 });
 </script>
